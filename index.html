@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-AU">
 <head>
     <meta charset="UTF-8">
     <title>Extended Euclidean Algorithm Practice Questions</title>
@@ -109,8 +109,8 @@
         const a = Math.floor(Math.random() * 100) + 1;
         const b = Math.floor(Math.random() * 100) + 1;
         document.getElementById("question").innerHTML = `Find the GCD of ${a} and ${b} and express it as a linear combination of ${a} and ${b} using the extended Euclidean algorithm.`;
-        document.getElementById("question").setAttribute("data-a", a);
-        document.getElementById("question").setAttribute("data-b", b);
+        document.getElementById("question").setAttribute("data-a", a.toString());
+        document.getElementById("question").setAttribute("data-b", b.toString());
         document.getElementById("answer").style.display = "none";
     };
 
@@ -118,7 +118,7 @@
         const a = parseInt(document.getElementById("question").getAttribute("data-a"));
         const b = parseInt(document.getElementById("question").getAttribute("data-b"));
         const { gcd, x1, y1 } = extendedEuclidean(a, b);
-        document.getElementById("answer").innerHTML = `The GCD of ${a} and ${b} is ${gcd}, and it can be expressed as x=${x1} and y= ${y1}.`;
+        document.getElementById("answer").innerHTML = `The GCD of ${a} and ${b} is ${gcd}, and it can be expressed as x=${x1} and y=${y1}.`;
         document.getElementById("answer").style.display = "block";
     };
 </script>
